@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadActivity">
+
+    <ImageView
+        android:id="@+id/uploadActivityImageView"
+        android:layout_width="300sp"
+        android:layout_height="220sp"
+        android:layout_marginTop="76dp"
+        android:onClick="choseImage"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/uploadActivityCommentText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selectimage" />
+
+    <EditText
+        android:id="@+id/uploadActivityCommentText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="Commentaire"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/uploadActivityPostButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uploadActivityImageView" />
+
+    <Button
+        android:id="@+id/uploadActivityPostButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="159dp"
+        android:onClick="postUpload"
+        android:text="Post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/uploadActivityCommentText"
+        app:layout_constraintTop_toBottomOf="@+id/uploadActivityCommentText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
